@@ -22,6 +22,7 @@ Required modules:
 ## Use
 
 ```sh
+git clone https://github.com/LMongoose/gameia-geneticalgorithm.git
 python main.py
 ```
 
