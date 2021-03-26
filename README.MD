@@ -23,11 +23,12 @@ Required modules:
 
 ```sh
 git clone https://github.com/LMongoose/gameia-geneticalgorithm.git
+cd gameia-geneticalgorithm
 python main.py
 ```
 
 
-[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
+[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job.)
 
    [pygame]: https://www.pygame.org/
    [pygame_gui]: https://pygame-gui.readthedocs.io/en/latest/
