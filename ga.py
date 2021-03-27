@@ -41,7 +41,7 @@ class GeneticAlgorithm():
                 self._normalize_scores()
                 self._next_generation()
                 self.draw(window)
-                time.sleep(0.2)
+                time.sleep(0.01)
 
     def draw(self, window):
         # clear both canvas
@@ -166,5 +166,4 @@ class GeneticAlgorithm():
                 indexA = random.randint(0, len(newpath) - 1)
                 indexB = (indexA + 1) % self.number_cities
                 newpath[indexA], newpath[indexB] = newpath[indexB], newpath[indexA]
-                #print("{0} -> {1}".format(path, newpath))
         return newpath
