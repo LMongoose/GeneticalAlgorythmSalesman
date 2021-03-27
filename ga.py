@@ -41,7 +41,7 @@ class GeneticAlgorithm():
                 self._normalize_scores()
                 self._next_generation()
                 self.draw(window)
-                time.sleep(0.01)
+                time.sleep(0.1)
 
     def draw(self, window):
         # clear both canvas
