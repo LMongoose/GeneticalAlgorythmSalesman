@@ -50,8 +50,8 @@ class GeneticAlgorithm():
         window.canvas_total_best = pygame.Surface((600, 480))
         window.canvas_total_best.fill((200, 200, 200))
 
-        color_line = (140, 140, 140)
         # draw paths
+        color_line = (140, 140, 140)
         for i in range(0, len(self.current_best) - 1):
             # draw on canvas 1 (current best)
             pygame.draw.line(window.canvas_current_best, color_line, self.cities[self.current_best[i]], self.cities[self.current_best[i + 1]], 3)
