@@ -1,4 +1,3 @@
-import random
 import pygame
 import pygame_gui
 from ga import GeneticAlgorithm
