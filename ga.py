@@ -50,19 +50,31 @@ class GeneticAlgorithm():
         window.canvas_total_best = pygame.Surface((600, 480))
         window.canvas_total_best.fill((200, 200, 200))
 
+        color_line = (140, 140, 140)
         # draw paths
         for i in range(0, len(self.current_best) - 1):
             # draw on canvas 1 (current best)
-            pygame.draw.line(window.canvas_current_best, (255, 0, 0), self.cities[self.current_best[i]], self.cities[self.current_best[i + 1]], 3)
+            pygame.draw.line(window.canvas_current_best, color_line, self.cities[self.current_best[i]], self.cities[self.current_best[i + 1]], 3)
             # draw on canvas 2 (best)
-            pygame.draw.line(window.canvas_total_best, (255, 0, 0), self.cities[self.best[i]], self.cities[self.best[i + 1]], 3)
+            pygame.draw.line(window.canvas_total_best, color_line, self.cities[self.best[i]], self.cities[self.best[i + 1]], 3)
+        # draw on canvas 1 (current best)
+        pygame.draw.line(window.canvas_current_best, color_line, self.cities[self.current_best[len(self.current_best) - 1]], self.cities[self.current_best[0]], 3)
+        # draw on canvas 2 (best)
+        pygame.draw.line(window.canvas_total_best, color_line, self.cities[self.best[len(self.current_best) - 1]], self.cities[self.best[0]], 3)
 
         # draw cities
         for city in self.cities:
+            if city == self.cities[0]:
+                color_city = (0, 240, 0)
+            elif city == self.cities[-1]:
+                color_city = (240, 0, 0)
+            else:
+                color_city = (0, 0, 0)
+
             # draw on canvas 1 (current best)
-            pygame.draw.circle(window.canvas_current_best, (240, 0, 0), (city[0], city[1]), 10)
+            pygame.draw.circle(window.canvas_current_best, color_city, (city[0], city[1]), 10)
             # draw on canvas 2 (best)
-            pygame.draw.circle(window.canvas_total_best, (240, 0, 0), (city[0], city[1]), 10)
+            pygame.draw.circle(window.canvas_total_best, color_city, (city[0], city[1]), 10)
 
         # update both canvas
         window.screen.blit(window.canvas_current_best, (30, 200))
