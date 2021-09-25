@@ -1,4 +1,4 @@
-# GeneticAlgorithm
+# GeneticAlgorithmSalesman
 ## Trying to solve Salesman Problem
 
 This is an attempt to solve the Salesman Problem by implementing a genetic algorythm.
